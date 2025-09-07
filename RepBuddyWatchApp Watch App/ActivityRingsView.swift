@@ -5,6 +5,7 @@
 //  Created by Pushkar Seshadri on 2/22/25.
 //
 
+//Connects fitness data to your activity rings and displays it in SummaryView
 import Foundation
 import HealthKit
 import SwiftUI

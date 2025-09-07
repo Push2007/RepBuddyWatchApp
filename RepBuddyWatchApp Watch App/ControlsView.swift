@@ -5,6 +5,7 @@
 //  Created by Pushkar Seshadri on 2/22/25.
 //
 
+//Screen which pauses/plays the workout. When paused, does not track repetitions
 import SwiftUI
 
 struct ControlsView: View {
