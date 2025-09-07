@@ -5,6 +5,7 @@
 //  Created by Ethan James on 11/12/24.
 //
 
+//The beginning screen of the app
 import SwiftUI
 import HealthKit
 struct StartScreen: View {

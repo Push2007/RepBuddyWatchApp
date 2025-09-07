@@ -9,6 +9,7 @@ import SwiftUI
 import WatchKit
 import HealthKit
 
+//Ties the ControlsView, Metrics View, RepView, and Apple Music when a workout starts
 struct SessionPagingView: View {
     @Environment(\.isLuminanceReduced) var isLuminanceReduced
     @EnvironmentObject var workoutManager: WorkoutManager

@@ -8,6 +8,7 @@
 import SwiftUI
 import HealthKit
 
+//View used to give a summary of your workout
 struct SummaryView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var workoutManager: WorkoutManager

@@ -5,6 +5,7 @@
 //  Created by Pushkar Seshadri on 2/22/25.
 //
 
+//Timer used to time workout
 import SwiftUI
 
 struct ElapsedTimeView: View {

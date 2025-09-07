@@ -5,6 +5,8 @@
 //  Created by Pushkar Seshadri on 2/22/25.
 //
 
+
+//View for time, calories burnt, and bpm during a workout
 import SwiftUI
 
 struct MetricsView: View {

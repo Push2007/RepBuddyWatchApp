@@ -5,6 +5,7 @@
 //  Created by Pushkar Seshadri on 3/19/25.
 //
 
+//View used to show user how many repetitions they completed
 import SwiftUI
 
 struct RepView: View {

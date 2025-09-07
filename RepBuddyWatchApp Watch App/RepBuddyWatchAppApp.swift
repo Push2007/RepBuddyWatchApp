@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+//How app starts when first being opened
 @main
 struct RepBuddyWatchApp_Watch_AppApp: App {
     @StateObject private var workoutManager = WorkoutManager()

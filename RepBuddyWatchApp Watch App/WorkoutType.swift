@@ -5,6 +5,7 @@
 //  Created by Ethan James on 11/12/24.
 //
 
+//Screen where users choose which exercise they want to track
 import SwiftUI
 import HealthKit
 
@@ -31,7 +32,7 @@ struct WorkoutType: View {
             }
         }
         .listStyle(.carousel)
-        .navigationTitle("Select a Workout")
+        .navigationTitle("Select an Exercise")
         .onAppear {
             workoutManager.requestAuthorization { _ in }
         }

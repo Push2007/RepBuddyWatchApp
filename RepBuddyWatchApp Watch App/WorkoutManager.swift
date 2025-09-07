@@ -9,7 +9,7 @@ import Foundation
 import HealthKit
 import CoreMotion
 
-
+//Class which uses HealthKit Workout Sessions and Motion Tracking when starting a workout. Has variables such as the start and pause of the workout, rep count, heart rate, bpm, etc. The backbone of RepBuddy
 class WorkoutManager: NSObject, ObservableObject { //added to myWorkoutsApp bc its an observable object
     var selectedWorkout: HKWorkoutActivityType? {
             didSet {

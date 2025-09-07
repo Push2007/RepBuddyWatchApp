@@ -2,6 +2,8 @@ import Foundation
 import CoreMotion
 
 // Renamed enum to avoid conflict with `WorkoutType` SwiftUI view
+
+//Class used to track motion, in turn, tracking repetitions for each exercise
 enum TrackedExercise {
     case benchPress, squats, bicepCurls
 }

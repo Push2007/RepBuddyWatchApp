@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+//Screen for setting - need to customize
 struct SettingsScreen: View {
     var body: some View {
         Text("Settings")
