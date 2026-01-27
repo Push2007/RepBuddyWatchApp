@@ -313,7 +313,7 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
                         didChangeTo toState: HKWorkoutSessionState,
                         from fromState: HKWorkoutSessionState,
                         date: Date) {
-        print("🔄 Workout session state changed from \(fromState.rawValue) to \(toState.rawValue)")
+        print("The workout session state changed from \(fromState.rawValue) to \(toState.rawValue)") // Print statement to make sure we are keeping proper track
         DispatchQueue.main.async {
             switch toState {
             case .notStarted:

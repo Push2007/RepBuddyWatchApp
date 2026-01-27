@@ -5,7 +5,7 @@
 //  Created by Ethan James on 11/12/24.
 //
 
-//Screen where users choose which exercise they want to track
+// Screen where users choose which exercise they want to track
 import SwiftUI
 import HealthKit
 
@@ -23,12 +23,13 @@ struct WorkoutType: View {
 
     var body: some View {
         List(workoutTypes, id: \.name) { workout in
-            NavigationLink(destination: SessionPagingView(
-                navigationPath: $navigationPath,
-                workoutType: workout.type,
-                workoutName: workout.name // Pass the name here
-            ).environmentObject(workoutManager)) {
-                Text(workout.name)
+            Button(workout.name) {
+                navigationPath.append(
+                    Route.session(
+                        workout: workout.type,
+                        name: workout.name
+                    )
+                )
             }
         }
         .listStyle(.carousel)
@@ -48,7 +49,6 @@ struct WorkoutType: View {
 
 
 
-// Conforming HKWorkoutActivityType to Identifiable
 extension HKWorkoutActivityType: @retroactive Identifiable {
     public var id: UInt {
         rawValue

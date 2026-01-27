@@ -34,7 +34,7 @@ struct SessionPagingView: View {
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(selection == .nowPlaying || selection == .metrics)
             .onAppear {
-                print("✅ SessionPagingView appeared with workout: \(workoutName)")
+                print("SessionPagingView appeared/worked with workout: \(workoutName)")
                 if workoutManager.selectedWorkout == nil {
                     workoutManager.selectedWorkoutName = workoutName
                     workoutManager.selectedWorkout = workoutType
@@ -69,6 +69,6 @@ struct SessionPagingView: View {
 
 
 #Preview {
-    SessionPagingView(navigationPath: .constant(NavigationPath()), workoutType: .running, workoutName: "Running")
+    SessionPagingView(navigationPath: .constant(NavigationPath()), workoutType: .running, workoutName: "Running")//filler code
         .environmentObject(WorkoutManager())
 }

@@ -75,10 +75,10 @@ class MotionTracker: ObservableObject {
                 return
             }	
         
-        // Calculate motion direction
+        //Calculate motion direction
         let isMovingDown = x < lastX
         
-        // Debounce: Don’t process if still in cooldown after last rep
+        //Don’t process if still in cooldown after last rep
         if let lastRep = lastRepTime, now.timeIntervalSince(lastRep) < cooldownAfterRep {
             lastX = x
             return
@@ -134,7 +134,7 @@ class MotionTracker: ObservableObject {
         // Calculate motion direction
         let isMovingDown = x < lastX
         
-        // Debounce: Don’t process if still in cooldown after last rep
+        // Don’t process if still in cooldown after last rep
         if let lastRep = lastRepTime, now.timeIntervalSince(lastRep) < cooldownAfterRep {
             lastX = x
             return

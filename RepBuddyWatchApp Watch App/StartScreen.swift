@@ -28,9 +28,9 @@ struct StartScreen: View {
 
             Spacer(minLength: 10.0)
 
-            NavigationLink(destination: WorkoutType(navigationPath: $navigationPath)
-                .environmentObject(workoutManager) // Provide WorkoutManager here
-            ) {
+            Button {
+                navigationPath.append(Route.workoutType)
+            } label: {
                 Text("Get Started")
                     .font(.system(size: 25))
                     .foregroundColor(.white)
@@ -47,7 +47,7 @@ struct StartScreen: View {
         .background(Color.black)
         .edgesIgnoringSafeArea(.all)
         .onAppear {
-            print("StartScreen appeared! Navigation path count: \(navigationPath.count)")
+            print("The StartScreen appears! Navigation path count: \(navigationPath.count)")
         }
     }
     

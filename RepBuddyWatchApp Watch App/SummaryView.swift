@@ -12,7 +12,6 @@ import HealthKit
 struct SummaryView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var workoutManager: WorkoutManager
-    @Binding var navigationPath: NavigationPath // Make it optional
 
     @State private var durationFormatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
@@ -22,10 +21,10 @@ struct SummaryView: View {
     }()
 
     var body: some View {
-        if workoutManager.workout == nil {
+        if workoutManager.workout == nil { // Should never be like this
             ProgressView("Saving workout")
                 .navigationBarHidden(true)
-        } else {
+        } else { // Should be like this
             ScrollView(.vertical) {
                 VStack(alignment: .leading) {
                     SummaryMetricView(
@@ -34,7 +33,7 @@ struct SummaryView: View {
                             .string(from: workoutManager.workout?.duration ?? 0.0) ?? ""
                     ).accentColor(Color.yellow)
                     
-                    // New Metric for Total Reps
+                    // New Metric for total reps
                     SummaryMetricView(
                         title: "Total Reps Completed",
                         value: "\(workoutManager.repCount) reps"
@@ -75,9 +74,6 @@ struct SummaryView: View {
                     
                     Button("Done") {
                         dismiss()
-                        DispatchQueue.main.async {
-                            navigationPath.removeLast(navigationPath.count) // Reset the navigation path
-                        }
                         
                     }
                     
@@ -91,7 +87,7 @@ struct SummaryView: View {
 }
 
 #Preview {
-    SummaryView(navigationPath: .constant(NavigationPath()))
+    SummaryView()
         .environmentObject(WorkoutManager())
 }
 
