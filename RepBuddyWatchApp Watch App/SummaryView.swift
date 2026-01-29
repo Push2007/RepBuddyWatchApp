@@ -58,7 +58,7 @@ struct SummaryView: View {
                             )
                         )
                     ).accentColor(Color.pink)
-                    
+                
                     SummaryMetricView(
                         title: "Avg. Heart Rate",
                         value: workoutManager.averageHeartRate

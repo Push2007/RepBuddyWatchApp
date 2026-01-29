@@ -45,9 +45,9 @@ struct RepBuddyWatchApp_Watch_AppApp: App {
                     print("Sheet dismissed. Now the navigation will reset.")
 
 
-                    navigationPath = NavigationPath()
+                    navigationPath = NavigationPath() // Start's the navigation path over, taking us back to StartScreen
 
-                    workoutManager.resetWorkout()
+                    workoutManager.resetWorkout() // Reset all functions for the user
                 }
             ) {
                 SummaryView()

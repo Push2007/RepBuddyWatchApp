@@ -19,7 +19,7 @@ struct ControlsView: View {
                         if session.state == .running || session.state == .paused {
                             workoutManager.endWorkout()
                         } else {
-                            print("Workout session is already ended or in an invalid state: \(session.state)")
+                            print("Workout session is already ended or in an invalid state: \(session.state)")// Should not be the case
                         }
                     }
                 } label: {

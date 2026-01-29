@@ -69,7 +69,7 @@ class MotionTracker: ObservableObject {
             guard let start = sessionStartTime, now.timeIntervalSince(start) >= warmUpDelay else {
                 if let start = sessionStartTime {
                     let timeLeft = warmUpDelay - now.timeIntervalSince(start)
-                    print("⏳ Warming up... \(String(format: "%.1f", timeLeft))s left")
+                    print("Warming up... \(String(format: "%.1f", timeLeft))s left")
                 }
                 lastX = x
                 return
@@ -88,7 +88,7 @@ class MotionTracker: ObservableObject {
             if lastPosition != -1 {
                 lastPosition = -1
                 lastBottomTime = now
-                print("⬇️ Squat Down Detected at \(now)")
+                print("Squat Down Detected at \(now)")
             }
         } else if x > topThreshold {
             if lastPosition == -1, let bottomTime = lastBottomTime {
@@ -125,7 +125,7 @@ class MotionTracker: ObservableObject {
             guard let start = sessionStartTime, now.timeIntervalSince(start) >= warmUpDelay else {
                 if let start = sessionStartTime {
                     let timeLeft = warmUpDelay - now.timeIntervalSince(start)
-                    print("⏳ Warming up... \(String(format: "%.1f", timeLeft))s left")
+                    print("Warming up... \(String(format: "%.1f", timeLeft))s left")
                 }
                 lastX = x
                 return
@@ -144,7 +144,7 @@ class MotionTracker: ObservableObject {
             if lastPosition != -1 {
                 lastPosition = -1
                 lastBottomTime = now
-                print("⬇️ Squat Down Detected at \(now)")
+                print("Squat Down Detected at \(now)")
             }
         } else if x > topThreshold {
             if lastPosition == -1, let bottomTime = lastBottomTime {
@@ -172,7 +172,7 @@ class MotionTracker: ObservableObject {
         guard let start = sessionStartTime, now.timeIntervalSince(start) >= warmUpDelay else {
             if let start = sessionStartTime {
                 let timeLeft = warmUpDelay - now.timeIntervalSince(start)
-                print("⏳ Get ready... \(String(format: "%.1f", timeLeft))s left")
+                print("Get ready... \(String(format: "%.1f", timeLeft))s left")
             }
             return
         }
@@ -180,7 +180,7 @@ class MotionTracker: ObservableObject {
         if acceleration.x > threshold {
             if lastDirection != 1 {
                 repCount += 1
-                print("💪 Bicep Curl Rep Count: \(repCount)")
+                print("Bicep Curl Rep Count: \(repCount)")
             }
             lastDirection = 1
         } else if acceleration.x < -threshold {
