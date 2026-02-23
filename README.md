@@ -1,7 +1,7 @@
 # RepBuddy
 RepBuddy is an Apple Watch app that tracks the number of repetitions you complete on an exercise. So far, we have been able to track bicep curls, squats, and bench press.
 
-**Link to project:** https://pushkarseshadri.wixsite.com/repbuddy
+**Link to portfolio:** https://pushkarseshadri.wixsite.com/repbuddy
 
 **Link to app:** https://apps.apple.com/us/app/rep-buddy/id6758496444
 
