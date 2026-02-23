@@ -3,6 +3,8 @@ RepBuddy is an Apple Watch app that tracks the number of repetitions you complet
 
 **Link to project:** https://pushkarseshadri.wixsite.com/repbuddy
 
+**Link to app:** https://apps.apple.com/us/app/rep-buddy/id6758496444
+
 ## How It's Made:
 
 **Tech used:** Swift, Apple Libraries, Xcode
